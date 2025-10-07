@@ -69,3 +69,39 @@ header nav {
     border-radius: 30px;
 }
 
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.hero-content-wrapper {
+    flex: 1;
+}
+.hero-content-wrapper h1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0%;
+    color: #0B132A;
+}
+
+.hero-content-wrapper p {
+    font-size: 16px;
+    color: #4F5665;
+}
+
+.hero-wrapper img {
+    flex: 1;
+}
+
+.hero-content-wrapper button {
+   width: 250px;
+   height: 60px;
+   color: whitesmoke;
+   background-color: #F53838;
+   border-radius: 10px;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+   font-weight: 700;
+   cursor: pointer;
+   border: 2px solid transparent;
+}
