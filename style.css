@@ -1,44 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-*
-*::before,
-*::after {
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
     font-family: "Poppins";
-    background-color: #FFFFFF;
+    background-color: white;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
 }
 
 .container {
     width: 100%;
     max-width: 1220px;
     margin: 0 auto;
-    /* padding: 0 20px; */
 }
 
 header nav {
     display: flex;
-    padding: 20px 0;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .menu-wrapper {
     display: flex;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
     font-size: 16px;
     list-style: none;
 }
@@ -47,61 +38,151 @@ header nav {
     color: #4F5665;
     text-decoration: none;
 }
-
 .menu-wrapper li a:hover {
-    color: #F53855;
+    color: #F53838;
 }
 
 .button-wrapper-auth {
     display: flex;
-    gap: 30px;
     align-items: center;
+    gap: 30px;
 }
-
 .button-wrapper-auth button {
     background-color: transparent;
     border: 2px solid transparent;
     padding: 5px 20px;
+    cursor: pointer;
 }
-
-.button-wrapper-auth button:hover {
+.button-wrapper-auth .btn-sign-up{
+    color: #f50707;
     outline: 2px solid #F53855;
     border-radius: 30px;
 }
 
+.button-wrapper-auth button:hover {
+    color: white;
+    border-radius: 30px;
+    background-color: #f50707;
+}
+
 .hero-wrapper {
     display: flex;
+    gap: 20px;
     align-items: center;
+    width: 100%;
+    margin-top: 50px;
 }
 
 .hero-content-wrapper {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+
 .hero-content-wrapper h1 {
     font-size: 50px;
-    font-weight: 500;
-    line-height: 70px;
-    letter-spacing: 0%;
     color: #0B132A;
+    font-weight: 400;
 }
 
 .hero-content-wrapper p {
-    font-size: 16px;
     color: #4F5665;
+    font-size: 16px;
+}
+
+.hero-content-wrapper button {
+    width: 250px;
+    height: 60px;
+    background-color: #F53838;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px #f17f7f;
+    border: 2px solid transparent;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+.hero-content-wrapper button:hover {
+    background-color: whitesmoke;
+    color: #F53838;
+    border: 2px solid #F53838;
+    font-weight: 700;
 }
 
 .hero-wrapper img {
     flex: 1;
 }
 
-.hero-content-wrapper button {
-   width: 250px;
-   height: 60px;
-   color: whitesmoke;
-   background-color: #F53838;
-   border-radius: 10px;
-   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-   font-weight: 700;
-   cursor: pointer;
-   border: 2px solid transparent;
+.features-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.wrapper-card-info {
+    width: 100%;
+    display: flex;
+    box-shadow: 0 5px 20px rgb(163, 163, 163);
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+.parent-info-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    flex: 1;
+    padding: 0 50px;
+}
+
+.info-card-locations {
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+}
+
+.wrapper-label-info {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.info-label-number {
+    font-size: 25px;
+    color: #0B132A;
+    font-weight: 700;
+}
+
+.info-label {
+    font-size: 20px;
+    color: #4F5665;
+}
+
+.parent-features-content {
+    display: flex;
+    align-items: end;
+    gap: 169px;
+}
+
+.wrapper-content-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper-list-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.list-features {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
 }
