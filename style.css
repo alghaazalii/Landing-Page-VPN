@@ -1,26 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins";
-    background-color: white;
+    background-color: #FBFBFB;
     width: 100%;
     height: 100vh;
 }
 
-.container {
+main {
     width: 100%;
-    max-width: 1220px;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.countainer {
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
-header nav {
-    display: flex;
+header {
     width: 100%;
+    background-color: #ffff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 10px 20px rgb(247, 246, 246);
+}
+
+header nav {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
@@ -31,15 +45,16 @@ header nav {
     align-items: center;
     gap: 40px;
     font-size: 16px;
-    list-style: none;
+    list-style-type: none;
 }
 
 .menu-wrapper li a {
     color: #4F5665;
     text-decoration: none;
 }
+
 .menu-wrapper li a:hover {
-    color: #F53838;
+    color: #F53855;
 }
 
 .button-wrapper-auth {
@@ -47,30 +62,30 @@ header nav {
     align-items: center;
     gap: 30px;
 }
+
 .button-wrapper-auth button {
     background-color: transparent;
-    border: 2px solid transparent;
     padding: 5px 20px;
-    cursor: pointer;
+    border: 2px solid transparent;
 }
-.button-wrapper-auth .btn-sign-up{
-    color: #f50707;
+
+.button-wrapper-auth button:hover {
     outline: 2px solid #F53855;
     border-radius: 30px;
 }
 
-.button-wrapper-auth button:hover {
-    color: white;
-    border-radius: 30px;
-    background-color: #f50707;
+.hero-section {
+    width: 100%;
+    background-color: #ffff;
+    padding-bottom: 80px;
 }
 
 .hero-wrapper {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
     width: 100%;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 
 .hero-content-wrapper {
@@ -80,7 +95,6 @@ header nav {
     gap: 20px;
 }
 
-
 .hero-content-wrapper h1 {
     font-size: 50px;
     color: #0B132A;
@@ -88,28 +102,19 @@ header nav {
 }
 
 .hero-content-wrapper p {
-    color: #4F5665;
     font-size: 16px;
+    color: #4F5665;
 }
 
 .hero-content-wrapper button {
     width: 250px;
     height: 60px;
-    background-color: #F53838;
     color: white;
+    background-color: #F53838;
     border-radius: 10px;
-    box-shadow: 0 10px 15px #f17f7f;
+    box-shadow: 0 10px 15px #f19393;
     border: 2px solid transparent;
     margin-top: 30px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 16px;
-}
-.hero-content-wrapper button:hover {
-    background-color: whitesmoke;
-    color: #F53838;
-    border: 2px solid #F53838;
-    font-weight: 700;
 }
 
 .hero-wrapper img {
@@ -120,7 +125,11 @@ header nav {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 56px;
+    gap: 96px;
+    background-color: #ffff;
+    padding-bottom: 131px;
+
+    margin-bottom: 100px;
 }
 
 .wrapper-card-info {
@@ -128,10 +137,9 @@ header nav {
     display: flex;
     box-shadow: 0 5px 20px rgb(163, 163, 163);
     padding: 50px 0;
-    border-radius: 10px;
 }
 
-.parent-info-card {
+.perent-info-card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,17 +149,18 @@ header nav {
 }
 
 .info-card-locations {
-    border-left: 2px solid #FFFFFF;
-    border-right: 2px solid #FFFFFF;
+    border-left: 2px solid #EEEFF2;
+    border-right: 2px solid #EEEFF2;
 }
 
 .wrapper-label-info {
     display: flex;
-    gap: 5px;
     flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
-.info-label-number {
+.info-lebel-number {
     font-size: 25px;
     color: #0B132A;
     font-weight: 700;
@@ -162,10 +171,11 @@ header nav {
     color: #4F5665;
 }
 
-.parent-features-content {
+.perent-features-content {
     display: flex;
     align-items: end;
     gap: 169px;
+    scroll-margin-top: 200px;
 }
 
 .wrapper-content-features {
@@ -178,11 +188,384 @@ header nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
+
 .list-features {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 5px;
+}
+
+/*  price section */
+
+.price-section {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price-section p {
+    text-align: center;
+    color: #4F5665;
+    font-size: 16px;
+}
+
+.wrapper-card-price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card-price {
+    width: 330px;
+    height: 760px;
+    background-color: #ffff;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 79px;
+    gap: 30px;
+    position: relative;
+}
+
+.card-price:hover {
+    border: 2px solid #F53838;
+    cursor: pointer;
+}
+
+
+
+.perent-list-benefit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wrapper-button-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 50px;
+}
+
+.wrapper-button-price button {
+    width: 177px;
+    height: 45px;
+    border-radius: 50px;
+    border: 2px solid #F53838;
+    color: #F53838;
+}
+
+
+.wrapper-button-price button:hover {
+    width: 177px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #F53838;
+    color: white;
+
+}
+
+.global-network-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.global-network-section img {
+    width: 1060px;
+    height: 537px;
+    object-fit: cover;
+    margin-top: 155px;
+    margin-bottom: 50px;
+}
+
+.wrapper-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-brand img {
+    width: 170px;
+    height: 51px;
+    margin-top: 0px;
+}
+
+/* section testimonials */
+.testimonials-section {
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding-top: 80px;
+    padding-bottom: 189px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column; 
+}
+
+.wrapper-card-testimonials {
+    width: 1330px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-top: 40px;
+}
+
+
+.card-testimonials {
+    width: 400px;
+    height: 230px;
+    padding: 30px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    text-align: start;
+    display: grid;
+    gap: 10px;
+}
+
+.card-testimonials:hover {
+    border: 2px solid #F53838;
+    border-radius: 10px;
+}
+
+.header-user-testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-user-testimonials span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.wrapper-user-testimonials {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.wrapper-user-testimonials img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.wrapper-biodata-user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper-biodata-user .name-user {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wrapper-biodata-user .address-user {
+    font-size: 14px;
+    color: #4F5665; 
+}
+
+.wrapper-bottom-testimonials {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-bottom-testimonials .wrapper-dot {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wrapper-dot .dot-active {
+    width: 45px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: #F53855;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #DDE0E4;
+}
+
+.wrapper-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.wrapper-button button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px solid #F53838;
+    background-color: transparent;
+}
+
+.wrapper-button button:active {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #e5b0b0;
+}
+
+.button-arrow-right img {
+    transform: scaleX(-1);
+}
+
+/* footer */
+footer {
+  width: 100%;
+  width: 1440px;
+  /* background-color: #f8f8f8; */
+  background-color: #F8F8F8;
+  padding: 180px 150px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.parent-card-subscribe {
+  width: 1140px;
+  height: 233px;
+  border-radius: 20px;
+  border: 2px solid #DDDDDD;
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 70px;
+  /* position: absolute; */
+}
+
+.footer-content {
+  display: grid;
+  gap: 20px;
+}
+
+.footer-content h1 {
+  width: 355px;
+  color: #0B132A;
+  font-size: 35px;
+}
+
+.footer-content h3 {
+  font-size: 18px;
+  color: #4F5665;
+}
+
+.parent-card-subscribe button {
+  width: 250px;
+  height: 60px;
+  border: 2px solid #F53838;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #F53838;
+  cursor: pointer;
+}
+.parent-card-subscribe button:active {
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #F53838;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 10px 10px 10px #e5b0b0;
+}
+
+.parent-content-footer {
+    width: 1140px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.wrapper-laslesvpn-content {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-image {
+    width: 148px;
+    height: 35px;
+}
+
+.wrapper-social-media-laslesvpn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0px;
+}
+
+.wrapper-social-media-laslesvpn a {
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    box-shadow: 10px 5px #f4ede0;
+    border-radius: 100%;
+}
+
+.wrapper-social-media-laslesvpn a img {
+    width: 35px;
+    height: 35px;
+}
+
+.wrapper-menu-footer {
+    width: 550px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.wrapper-menu {
+    display: grid;
+    gap: 20px;
+}
+
+.wrapper-menu-footer .menu {
+    display: grid;
+    gap: 10px;
+}
+
+.wrapper-menu-footer .menu a {
+    text-decoration: none;
+    color: #4F5665;
+    font-size: 16px;
 }
